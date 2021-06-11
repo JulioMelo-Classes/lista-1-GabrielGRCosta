@@ -1,12 +1,19 @@
 #include <iostream>
-using std::cin;
-using std::cout;
+using namespace std;
 
 const int SIZE = 5; // input size.
 
 int main(void)
 {
-    // TODO: Adicione aqui seu código.
+  int vet[5];
+  int xlr8=0;
+  for(int i=0;i<SIZE;i++){
+    cin >> vet[i] ;
+    if(vet[i]<0){
+      xlr8+=1;
+    }
+  }
+  cout << xlr8 << endl;
 
-    return 0;
+  return 0;
 }

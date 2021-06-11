@@ -1,0 +1,4 @@
+/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/negativos5/build/CMakeFiles/rebuild_cache.dir
+/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/negativos5/build/CMakeFiles/program.dir
+/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/negativos5/build/CMakeFiles/edit_cache.dir
+/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/negativos5/build/CMakeFiles/verify.dir
