@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/invert
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -124,6 +124,19 @@ run_tests/fast:
 .PHONY : run_tests/fast
 
 #=============================================================================
+# Target rules for targets named func
+
+# Build rule for target.
+func: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 func
+.PHONY : func
+
+# fast build rule for target.
+func/fast:
+	$(MAKE) -f CMakeFiles/func.dir/build.make CMakeFiles/func.dir/build
+.PHONY : func/fast
+
+#=============================================================================
 # Target rules for targets named all_tests
 
 # Build rule for target.
@@ -133,8 +146,89 @@ all_tests: cmake_check_build_system
 
 # fast build rule for target.
 all_tests/fast:
-	$(MAKE) -f tests/CMakeFiles/all_tests.dir/build.make tests/CMakeFiles/all_tests.dir/build
+	$(MAKE) -f CMakeFiles/all_tests.dir/build.make CMakeFiles/all_tests.dir/build
 .PHONY : all_tests/fast
+
+src/function.o: src/function.cpp.o
+
+.PHONY : src/function.o
+
+# target to build an object file
+src/function.cpp.o:
+	$(MAKE) -f CMakeFiles/func.dir/build.make CMakeFiles/func.dir/src/function.cpp.o
+.PHONY : src/function.cpp.o
+
+src/function.i: src/function.cpp.i
+
+.PHONY : src/function.i
+
+# target to preprocess a source file
+src/function.cpp.i:
+	$(MAKE) -f CMakeFiles/func.dir/build.make CMakeFiles/func.dir/src/function.cpp.i
+.PHONY : src/function.cpp.i
+
+src/function.s: src/function.cpp.s
+
+.PHONY : src/function.s
+
+# target to generate assembly for a file
+src/function.cpp.s:
+	$(MAKE) -f CMakeFiles/func.dir/build.make CMakeFiles/func.dir/src/function.cpp.s
+.PHONY : src/function.cpp.s
+
+tests/lib/test_manager/src/test_manager.o: tests/lib/test_manager/src/test_manager.cpp.o
+
+.PHONY : tests/lib/test_manager/src/test_manager.o
+
+# target to build an object file
+tests/lib/test_manager/src/test_manager.cpp.o:
+	$(MAKE) -f CMakeFiles/all_tests.dir/build.make CMakeFiles/all_tests.dir/tests/lib/test_manager/src/test_manager.cpp.o
+.PHONY : tests/lib/test_manager/src/test_manager.cpp.o
+
+tests/lib/test_manager/src/test_manager.i: tests/lib/test_manager/src/test_manager.cpp.i
+
+.PHONY : tests/lib/test_manager/src/test_manager.i
+
+# target to preprocess a source file
+tests/lib/test_manager/src/test_manager.cpp.i:
+	$(MAKE) -f CMakeFiles/all_tests.dir/build.make CMakeFiles/all_tests.dir/tests/lib/test_manager/src/test_manager.cpp.i
+.PHONY : tests/lib/test_manager/src/test_manager.cpp.i
+
+tests/lib/test_manager/src/test_manager.s: tests/lib/test_manager/src/test_manager.cpp.s
+
+.PHONY : tests/lib/test_manager/src/test_manager.s
+
+# target to generate assembly for a file
+tests/lib/test_manager/src/test_manager.cpp.s:
+	$(MAKE) -f CMakeFiles/all_tests.dir/build.make CMakeFiles/all_tests.dir/tests/lib/test_manager/src/test_manager.cpp.s
+.PHONY : tests/lib/test_manager/src/test_manager.cpp.s
+
+tests/main.o: tests/main.cpp.o
+
+.PHONY : tests/main.o
+
+# target to build an object file
+tests/main.cpp.o:
+	$(MAKE) -f CMakeFiles/all_tests.dir/build.make CMakeFiles/all_tests.dir/tests/main.cpp.o
+.PHONY : tests/main.cpp.o
+
+tests/main.i: tests/main.cpp.i
+
+.PHONY : tests/main.i
+
+# target to preprocess a source file
+tests/main.cpp.i:
+	$(MAKE) -f CMakeFiles/all_tests.dir/build.make CMakeFiles/all_tests.dir/tests/main.cpp.i
+.PHONY : tests/main.cpp.i
+
+tests/main.s: tests/main.cpp.s
+
+.PHONY : tests/main.s
+
+# target to generate assembly for a file
+tests/main.cpp.s:
+	$(MAKE) -f CMakeFiles/all_tests.dir/build.make CMakeFiles/all_tests.dir/tests/main.cpp.s
+.PHONY : tests/main.cpp.s
 
 # Help Target
 help:
@@ -142,10 +236,20 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... run_tests"
 	@echo "... edit_cache"
+	@echo "... run_tests"
+	@echo "... rebuild_cache"
+	@echo "... func"
 	@echo "... all_tests"
+	@echo "... src/function.o"
+	@echo "... src/function.i"
+	@echo "... src/function.s"
+	@echo "... tests/lib/test_manager/src/test_manager.o"
+	@echo "... tests/lib/test_manager/src/test_manager.i"
+	@echo "... tests/lib/test_manager/src/test_manager.s"
+	@echo "... tests/main.o"
+	@echo "... tests/main.i"
+	@echo "... tests/main.s"
 .PHONY : help
 
 

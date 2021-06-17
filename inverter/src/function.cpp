@@ -1,7 +1,7 @@
-#include "function.h"
 #include <iostream>
 #include <iterator>
 using std::swap;
+#include <array>
 using namespace std;
 
 /*! 
@@ -9,13 +9,30 @@ using namespace std;
  * @param arr Reference to the array with the values.
  */
 template <size_t SIZE>
-void reverse( std::array< std::string, SIZE > & arr )
+void reverse ( std::array <std::string, SIZE> &arr )
 {
   int tam;
   tam = arr.size();
-  for(int i=0;i<tam/2;i++){
-    std::swap(arr.begin()+i,arr.end()-i);
-    cout << arr[i] << endl;
+  int vet[tam];
+  if(tam % 2 == 0){
+    for(int i=0;i<tam/2;i++){
+      if(i==0){
+        swap(*(arr.begin()+i), *(arr.end()-1));
+      }
+      else{ 
+        swap(*(arr.begin()+i), *(arr.end()-i-1));
+      }  
+    }
+  }
+  else{
+    for(int i=0;i<tam/2;i++){
+      if(i==0){
+        swap(*(arr.begin()+i), *(arr.end()-1));
+      }
+      else{ 
+        swap(*(arr.begin()+i), *(arr.end()-i-1));
+      }
+    }
   }
   
 }

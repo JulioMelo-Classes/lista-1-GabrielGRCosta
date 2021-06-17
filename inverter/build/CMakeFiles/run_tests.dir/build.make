@@ -53,8 +53,8 @@ CMAKE_BINARY_DIR = /home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/invert
 # Include the progress variables for this target.
 include CMakeFiles/run_tests.dir/progress.make
 
-CMakeFiles/run_tests:
-	tests/all_tests
+CMakeFiles/run_tests: libfunc.a
+	./all_tests
 
 run_tests: CMakeFiles/run_tests
 run_tests: CMakeFiles/run_tests.dir/build.make

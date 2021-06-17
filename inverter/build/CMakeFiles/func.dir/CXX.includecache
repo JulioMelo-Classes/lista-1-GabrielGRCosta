@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/inverter/src/function.cpp
+iostream
+-
+iterator
+-
+array
+-
+
