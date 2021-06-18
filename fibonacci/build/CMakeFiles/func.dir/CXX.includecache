@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/fibonacci/src/function.cpp
+function.h
+/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/fibonacci/src/function.h
+
+/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/fibonacci/src/function.h
+vector
+-
+

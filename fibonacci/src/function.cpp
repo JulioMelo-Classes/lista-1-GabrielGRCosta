@@ -1,26 +1,27 @@
 #include "function.h"
+using namespace std;
 
-std::vector<unsigned int> fib_below_n( unsigned int n )
+vector<unsigned int> fib_below_n( unsigned int n )
 {
-  int p1=0,p2=1,p=0;
-  int vet[n];
+  int p1=1,p2=1,p=0;
+  vector<unsigned int> vet={1,1};
   if(n==1){
-    return std::vector<unsigned int>{};
+    vector<unsigned int>p;
+    return p;
   }
   else if(n==2){
-    return {1,1};
+    return vet;
   }
-  for(int i=0;i<n;i++){
-    p = p1 + p2;
-    if(i>0){
+  else{ 
+    while(p<n){ 
+      p = p1 + p2;
+      p1 = p2;
       p2=p;
+      if(p>=n){
+        break;
+      }  
+      vet.push_back(p);
     }
-    p1 = p2;
-    vet[i] = p1;
-    if(i==1){
-      vet[i+1] = p2+1;
-    }
-    vet[i+1] = p2;  
   }
-    return std::vector<unsigned int>{};
+  return vet;
 }

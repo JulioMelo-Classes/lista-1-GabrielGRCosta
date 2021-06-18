@@ -1,0 +1,5 @@
+/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/fibonacci/build/CMakeFiles/edit_cache.dir
+/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/fibonacci/build/CMakeFiles/run_tests.dir
+/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/fibonacci/build/CMakeFiles/rebuild_cache.dir
+/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/fibonacci/build/CMakeFiles/func.dir
+/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/fibonacci/build/CMakeFiles/all_tests.dir
