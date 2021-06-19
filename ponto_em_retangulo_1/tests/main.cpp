@@ -139,7 +139,7 @@ int main ( void )
             // Abaixo
             for( auto y{R1.y-1} ; y <= R2.y+1 ; ++y )
             {
-                cout << R1.x << " " << R1.y << "  " << R2.x << " " << R2.y << "   " << R1.x-1 << " " << y << " outside" << '\n';
+                cout << R1.x << " " << R1.y << "  " << R2.x << " " << R2.y << "   " << R1.x-1 << " " << y << " OUTSIDE" << '\n';
                 EXPECT_TRUE( location_t::OUTSIDE == pt_in_rect( R1, R2, Ponto{R1.x-1, y} ) );
             }
         }
