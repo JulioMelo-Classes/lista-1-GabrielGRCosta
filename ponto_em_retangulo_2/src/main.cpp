@@ -18,7 +18,9 @@ using std::max;
 
 // Coloque aqui qualquer função auxiliar que desejar.
 
-
+/*
+80% pois faltou a validação dos retângulos
+*/
 int main(void)
 {
   Ponto R1,R2,P;

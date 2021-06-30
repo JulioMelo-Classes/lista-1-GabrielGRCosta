@@ -1,5 +1,0 @@
-/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/inverter/build/CMakeFiles/edit_cache.dir
-/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/inverter/build/CMakeFiles/run_tests.dir
-/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/inverter/build/CMakeFiles/rebuild_cache.dir
-/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/inverter/build/CMakeFiles/func.dir
-/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/inverter/build/CMakeFiles/all_tests.dir

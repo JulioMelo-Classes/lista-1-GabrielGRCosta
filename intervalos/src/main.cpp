@@ -12,6 +12,9 @@ using std::setprecision;
 
 // Se desejar, crie funções aqui, antes do main().
 
+/*
+bom, não precisava de vetores, mas blz
+*/
 int main(void)
 {
   int x,b=0,c=0,f=0,e=0,h=0;

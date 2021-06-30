@@ -1,4 +1,0 @@
-/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/intervalos/build/CMakeFiles/rebuild_cache.dir
-/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/intervalos/build/CMakeFiles/program.dir
-/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/intervalos/build/CMakeFiles/edit_cache.dir
-/home/runner/CorruptHighFactors/lista-1-GabrielGRCosta/intervalos/build/CMakeFiles/verify.dir

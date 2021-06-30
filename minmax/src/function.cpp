@@ -2,7 +2,9 @@
 #include <cstddef>
 using std::size_t;
 
-
+/*
+ok
+*/
 std::pair<int,int> min_max( int V[], size_t n )
 {
     int tam,menor=0,maior=0,f1=0,lu=0;
